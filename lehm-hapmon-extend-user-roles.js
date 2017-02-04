@@ -6,7 +6,7 @@ module.exports = {
   delimiters: '{{ }}',
   ignore: ['README.md'],
 
-  after: function (srcPath, distPath, variables, utils) {
+  after ({ srcPath, distPath, variables, utils }) {
     console.log(utils.Chalk.green('\n\nExtend `./client/components/nav-bar/nav-bar.html`, or anywhere else, with:'))
     console.log(utils.Chalk.yellow(`
   <template v-if="userIsAuthenticated">
